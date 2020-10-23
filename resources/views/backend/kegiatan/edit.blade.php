@@ -68,9 +68,7 @@
               </div>
             </div>
             <div class="pt-2 mb-2">
-              <button type="submit" class="btn btn-outline-info">
-                  Save
-              </button>
+              <button type="submit" class="btn btn-outline-info">Save</button>
             </div>
           </form>
         </div>

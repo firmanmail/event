@@ -21,6 +21,7 @@
                 <th>Kode Kegiatan</th>
                 <th>Tanggal</th>
                 <th>Status</th>
+                <th>Images</th>
                 <th>Option</th>
               </tr>
             </thead>
@@ -32,9 +33,16 @@
                 </td>
                 <td>{{$activity->date}}</td>
                 <td>{{$activity->status}}</td>
-                </td>
+                  <td>
+                    <img src="{{asset('storage/'.$activity->images)}}" alt="" class="rounded" width="50px   " heigth="10px ">
+                  </td>
                 <td>
-                  <a href="http://" class="btn btn-outline-danger btn-sm">Hapus</a>
+
+                  <a href="{{route('backend.kegiatan.delete', $activity->id)}}" class="btn btn-outline-primary btn-sm">Edit</a>
+                  <form action="{{route('backend.kegiatan.delete',$activity->id)}}" method="POST">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-outline-danger btn-sm" type="submit">Delete</button>
                 </td>
               </tr>
               @endforeach

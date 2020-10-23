@@ -17,7 +17,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label for="name">Kode Kegiatan</label>
-                    <input type="text" name="code_activity" id="" class="form-control" value="{{ $getCode }}" placeholder="" readonly>
+                    <input type="text" name="code_activity" id="" class="form-control" value="{{ $getCode }}" placeholder="">
                 </div>
               </div>
               <div class="col-md-6">

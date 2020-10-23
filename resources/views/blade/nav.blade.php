@@ -11,11 +11,11 @@
           <!-- Left Side Of Navbar -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a href="" class="nav-link">Dashboard</a>
+              <a href="{{route('backend.kegiatan.index')}}" class="nav-link">Dashboard</a>
             </li>
-            <li class="nav-item">
-            <a href="{{route('backend.kegiatan.index')}}" class="nav-link">Master Kegiatan</a>
-            </li>
+            <!-- <li class="nav-item">
+            <a href="" class="nav-link">Master Kegiatan</a>
+            </li> -->
             <li class="nav-item">
             <a href="{{route('registers')}}" class="nav-link">Master Pendaftaran</a>
             </li>

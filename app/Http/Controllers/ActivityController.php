@@ -98,7 +98,8 @@ class ActivityController extends Controller
     public function edit($id)
     {
         $activity = Activity::findOrFail($id);
-        return view('backend.kegiatan.edit', compact('activity'));
+
+        return view('backend.kegiatan.edit', compact('activitys'));
     }
 
     /**
@@ -123,8 +124,13 @@ class ActivityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Activity $activity)
     {
-        //
+        $activity->delete();
+        if(\File::exist(public_path('storage/'. $activity->images)));
+        {
+            \File::delete(public_path('storage/'. $activity->images));
+        }
+        return redirect()->back()->with(['success' => 'Activity berhasil dibuat']);
     }
 }

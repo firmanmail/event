@@ -28,7 +28,7 @@
                 <a href="" class="nav-link">
                     <h6 class="text-muted">Home</h6>
                 </a>
-                <a href="" class="nav-link">
+                <a href="{{route('users.kegiatan.index')}}" class="nav-link">
                     <h6 class="text-muted">Kegiatan</h6>
                 </a>
                 <a href="" class="nav-link">
@@ -36,7 +36,7 @@
                 </a>
             </nav>
         </div>
-        <div class="jumbotron" style="background-image: url('banner/undraw_festivities_tvvj.png')">
+        <div class="jumbotron" style="background-image: url('banner/banner.png')">
             <div class="container">
                 <h3 class="text-center">
                     Aplikasi Management Kegiatan
@@ -52,7 +52,7 @@
                         </li>
                     </ol>
                 </nav>
-                <div class="row">
+                <div class="justify-content-center">
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-4">
@@ -99,7 +99,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="card border-0">
                                 <img src="{{asset('banner/undraw_date_picker_gorr.png')}}" 
                                      alt="" 
@@ -111,13 +111,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="card border-0">
                                 <img src="{{asset('banner/undraw_date_picker_gorr.png')}}" alt="" class="card-img-top">
                                     <div class="card-body">
                                         <h3>Bukber Bersama</h3>
                                         <p>Coming Soon</p>
-                                        <button type="block" class="btn btn-outline-Danger btn-lg btn-block" disabled>Cooming Soon</button>
+                                        <button class="btn-lg btn-block btn-outline-success" disabled>
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                            Non Active
+                                        </button>
                                     </div>
                                 </div>
                             </div>

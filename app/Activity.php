@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Alfa6661\AutoNumber\AutoNumberTrait;
 
 class Activity extends Model
 {
+    
     protected $table = 'activitys';
     protected $guarded = [];
 

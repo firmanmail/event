@@ -51,7 +51,7 @@
               <div class="col-md-12">
                 <div class="form-group">
                     <label for="name">Informasi</label>
-                    <textarea name="information" id="" value="" class="form-control">{{$activity->information}}</textarea>
+                    <textarea name="information" id="" class="form-control">{{$activity->information}}</textarea>
                 </div>
               </div>
               <div class="col-md-6">

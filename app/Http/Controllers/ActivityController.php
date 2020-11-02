@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Activity;
 use Illuminate\Http\Request;
-use Intervention\Image\Facades\Image;
+use Intervention\Image\Facades\Image;   
 
 class ActivityController extends Controller
 {
@@ -99,7 +99,7 @@ class ActivityController extends Controller
     {
         $activity = Activity::findOrFail($id);
 
-        return view('backend.kegiatan.edit', compact('activitys'));
+        return view('backend.kegiatan.edit', compact('activity'));
     }
 
     /**
@@ -127,10 +127,11 @@ class ActivityController extends Controller
     public function destroy(Activity $activity)
     {
         $activity->delete();
-        if(\File::exist(public_path('storage/'. $activity->images)));
-        {
+
+        if(\File::exists(public_path('storage/'. $activity->images))){
             \File::delete(public_path('storage/'. $activity->images));
         }
-        return redirect()->back()->with(['success' => 'Activity berhasil dibuat']);
+
+        return redirect()->back()->with(['success' => 'Kegiatan berhasil di hapus']);
     }
 }

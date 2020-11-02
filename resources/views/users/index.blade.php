@@ -22,8 +22,8 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Miracle</td>
-                  <td>Miracle@gmail.com</td>
+                  <td>Xixixi</td>
+                  <td>maman@gmail.com</td>
                   <td>siswa</td>
                   <td>
                     <form action="">

@@ -37,8 +37,6 @@
                     <img src="{{asset('storage/'.$activity->images)}}" alt="" class="rounded" width="50px   " heigth="10px ">
                   </td>
                 <td>
-
-                  <a href="{{route('backend.kegiatan.delete', $activity->id)}}" class="btn btn-outline-primary btn-sm">Edit</a>
                   <form action="{{route('backend.kegiatan.delete',$activity->id)}}" method="POST">
                   @csrf
                   @method('DELETE')
